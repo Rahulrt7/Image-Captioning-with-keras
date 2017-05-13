@@ -137,7 +137,7 @@ board = callbacks.TensorBoard(log_dir='./tensorboard_logs', histogram_freq=0, wr
 
 
 model_history = model.fit([image_train, word_train], y_train, verbose=2, callbacks=[checkpoint, board], 
-                validation_data=([image_val, word_val], y_val) , batch_size=batch_size, shuffle=True, epochs=300)
+                validation_data=([image_val, word_val], y_val) , batch_size=batch_size, shuffle=True, epochs=100)
 
 score = model.evaluate([image_val, word_val], y_val, verbose=2, batch_size=batch_size)
 
